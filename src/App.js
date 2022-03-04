@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 
+import Home from './Components/Home-Section/Home';
+import Destination from './Components/Destintion/Destination';
+import Crew from './Components/Destintion/Crew/Crew'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <div className=' max-w-[1440px] mx-auto  ' >
+      
+      <Home />
+      {/* <Destination /> */}
+      {/* <Crew /> */}
+      </div>
+
+  
   );
 }
 
