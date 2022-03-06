@@ -6,10 +6,10 @@ function App() {
     
       <div className=' max-w-[1440px] mx-auto  ' >
       
-      /<Home />
-      <Destination />
-      <Crew />
-      <SpaceLaunch / >
+        {/* <Home /> */}
+        <Destination />
+        {/* <Crew /> */}
+        {/* <SpaceLaunch /> */}
       </div>
 
   

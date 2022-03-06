@@ -1,18 +1,19 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Moon from "../../Assets/Images/Moon.png";
+import './destination.css';
 
 const Destination = () => {
   return (
     <div>
       <Navbar />
-        <div className="text-4xl  text-white flex justify-center lg:justify-start p-11 lg:p-7">
+        <div className="text-2xl md:text-3xl lg:text-4xl text-white flex justify-center lg:justify-start p-11 lg:p-7">
           <di className="mr-6 lg:ml-8">01</di>
           <h1 className="">Pick Your Destination</h1>
         </div>
       
         <div className="flex flex-col justify-center item-center   lg:flex-row lg:justify-around">
-          <img src={Moon} alt="" className="inline p-16 md:p-32 lg:p-24" />
+          <img src={Moon} alt="" className="inline p-16 md:p-32 lg:p-20 App-logo" />
 
           <div>
           <article className="  ">
