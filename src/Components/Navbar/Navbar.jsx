@@ -15,7 +15,7 @@ const Navbar = () => {
             
 
             <div>
-                <ul className=' justify-around  bg-gray-900 bg-blur-sm items-center hidden md:flex  md:text-md md:p-5  md:w-[450px] lg:w-[830px] lg:space-x-9 lg:text-xl lg:justify-self-end'>
+                <ul className=' justify-around  blue-glassmorphism bg-blur-sm items-center hidden md:flex  md:text-md md:p-5  md:w-[450px] lg:w-[830px] lg:space-x-9 lg:text-xl lg:justify-self-end'>
                     <li><a href=""><span className='font-bold px-1 md:hidden lg:inline-block'>00</span>  HOME</a></li>
                     <li><a href=""><span className='font-bold px-1 md:hidden lg:inline-block'>01</span>  DESTINATION</a></li>
                     <li><a href=""><span className='font-bold px-1 md:hidden lg:inline-block'>02</span>  CREW</a></li>
@@ -25,10 +25,10 @@ const Navbar = () => {
             
             {menu
                 ? <IoCloseSharp size={40} className='md:hidden cursor-pointer' onClick={()=>{setMenu(false)}}/> 
-                : <IoApps size={40} className='md:hidden cursor-pointer' onClick={() => { setMenu(true) }} />}
-            {
+                : <IoApps size={40} className='md:hidden cursor-pointer ' onClick={() => { setMenu(true) }} />}
+                {
                 menu && (
-                    <div className='absolute top-0 right-0 w-80 h-full bg-gray-900  md:hidden '>
+                    <div className='absolute top-0 right-0 w-80 blue-glassmorphism shadow-2xl h-full   md:hidden '>
 
                         <div className='p-5'>
                         <IoCloseSharp size={40} className='md:hidden cursor-pointer ' onClick={()=>{setMenu(false)}}/>

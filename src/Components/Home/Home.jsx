@@ -1,8 +1,9 @@
 import React from "react";
 import Navbar from '../Navbar/Navbar'
+import './home.css'
 function Home() {
   return (
-    <div className="relative">
+    <div className="">
 
     <Navbar />
 
@@ -17,10 +18,13 @@ function Home() {
           reiciendis culpa facilis cumque omnis vitae odit, ut modi consectetur
           accusantium dolorem?
         </p>
-          </div>
-          <div className=" min-w-[274px] h-[274px] bg-white  my-20 flex justify-center items-center rounded-full">
-                <h2 className="text-5xl text-black">Explore</h2>
-          </div>
+        </div>
+      
+
+          <div className=" min-w-[274px] h-[274px] shadow-xl explore-hover cursor-pointer bg-white  my-20 flex justify-center items-center rounded-full">
+                <h2 className="text-5xl text-black ">Explore</h2>
+         
+        </div>
       </div>
    
     

@@ -1,0 +1,8 @@
+.explore-hover:hover{
+
+    outline: 2px solid #FFF ;
+    box-shadow:  0 0 60px 30px rgb(90, 127, 199);
+    outline-offset: 70px;
+    transition: all .5s ease;
+  
+}
