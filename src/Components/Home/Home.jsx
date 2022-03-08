@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from '../Navbar/Navbar'
+import {  Link } from "react-router-dom";
 import './home.css'
 function Home() {
   return (
@@ -21,8 +22,8 @@ function Home() {
         </div>
       
 
-          <div className=" min-w-[274px] h-[274px] shadow-xl explore-hover cursor-pointer bg-white  my-20 flex justify-center items-center rounded-full">
-                <h2 className="text-5xl text-black ">Explore</h2>
+          <div className=" min-w-[274px] h-[274px] shadow-xl explore-hover cursor-pointer bg-white   flex justify-center items-center rounded-full">
+                <h2 className="text-5xl text-black "><Link to="/destination">Explore</Link></h2>
          
         </div>
       </div>

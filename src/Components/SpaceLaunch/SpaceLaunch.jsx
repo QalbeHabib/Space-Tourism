@@ -1,7 +1,12 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import Navbar from '../Navbar/Navbar'
-import Launch from '../../Assets/Images/Launch.png'
-const SpaceLaunch = () => {
+
+const SpaceLaunch = ({ datas }) => {
+  const [state, setState] = useState(datas[0])
+  
+  const updateState = (id) => {
+  setState(datas[id])
+}
   return (
     <div className="text-white h-screen">
     <Navbar />
@@ -19,18 +24,23 @@ const SpaceLaunch = () => {
          
           <div className=" space-y-6  text-center lg:text-left flex flex-col  m-5 md:p-6 md:w-[470px] lg:w-[500px]">
                 <span className="text-xl mt-8 md:text-3xl text-gray-400">THE TERIMINILOGY...</span>
-                <h1 className="text-4xl md:text-5lg lg:text-6xl">LAUNCH VEHICLE</h1>
+                <h1 className="text-4xl md:text-5lg lg:text-6xl">{state.title}</h1>
 
                 <p className="text-xl font-light pb-10">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-                  mollitia impedit obcaecati ipsam cum quis, dignissimos hic
-                  deserunt explicabo quae exercitationem perspiciatis suscipit
-                  nostrum molestias.
+                  {state.description}
               </p>
-              <ul className='order-first lg:order-none'>
-                <li className="p-5 m-2 bg-white inline-block text-black rounded-full border-black ">1</li>
-                <li className="p-5 m-2 bg-gray-500  inline-block rounded-full border-white ">2</li>
-                <li className="p-5 m-2 bg-gray-500  inline-block rounded-full border-white ">3</li>
+            <ul className='order-first lg:order-none'>
+              {
+                datas.map((a,idx) => {
+                  return (
+                    <div key={idx} className="p-4 m-2 bg-gray-500  inline-block rounded-full border-white cursor-pointer hover:bg-white hover:text-black font-bold">
+                      <li onClick={()=> updateState(idx)}>{idx + 1}</li>
+                    </div>
+                  )
+                })
+              }
+                
+               
                
               </ul>
           </div>
@@ -41,10 +51,12 @@ const SpaceLaunch = () => {
 
       </div>
 
-  
+     
 
       <div className="  flex justify-center items-center text-center "  >
-       <div className=' w-96 h-80  md:w-[768px] md:h-[310px] lg:w-[525px] lg:h-[500px] bg-gradient-to-r from-red-500 to-blue-500 bg-no-repeat bg-contain ' ></div>
+          <div >
+            <img src={ state.url }  className= 'w-96 h-80  md:w-[768px] md:h-[310px] lg:w-[525px] lg:h-[500px]  bg-no-repeat bg-contain shadow-lg rounded-xl'/>
+          </div>
       </div>
       
 

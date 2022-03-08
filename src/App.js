@@ -1,18 +1,26 @@
-import './App.css';
+import "./App.css";
 
-import { Home,Destination,SpaceLaunch,Crew,Navbar } from './Components'
+import { Home, Destination, SpaceLaunch, Crew, Navbar } from "./Components";
+import { GlobalContext , crewData , LaunchData } from "./Context/GlobalContext";
+import { Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
-    
-      <div className=' max-w-[1440px] mx-auto  ' >
-      
-        {/* <Home /> */}
-        <Destination />
-        {/* <Crew /> */}
-        {/* <SpaceLaunch /> */}
-      </div>
 
-  
+      <div className=" max-w-[1440px] mx-auto scroll-smooth  ">
+
+      
+      <Routes >
+        <Route path="/" element={<Home />} />
+        <Route path="destination" element={<Destination datas={GlobalContext} />} />
+        <Route path="crew" element={<Crew datas={ crewData } />} />
+        <Route path="spacelaunch" element={<SpaceLaunch datas={ LaunchData } />} />
+       
+
+      </Routes>
+        
+      </div>
+      
+
   );
 }
 

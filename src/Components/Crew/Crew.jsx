@@ -1,8 +1,15 @@
-import React from "react";
+import React,{useState} from "react";
 import Navbar from "../Navbar/Navbar";
-import Avatar from '../../Assets/Images/Avatar.png';
+import Douglas from '../../Assets/Images/Douglas.png';
+
 import './crew.css'
-const Crew = () => {
+const Crew = ({datas}) => {
+
+  const [state, setState] = useState(datas[0])
+  
+  const updateState = (id) => {
+    setState(datas[id])
+  }
   return (
     <div className="text-white h-screen">
       <Navbar />
@@ -17,38 +24,36 @@ const Crew = () => {
               <div>Meet Your Crew</div>
           </div>
         <div className=" space-y-9  text-center lg:text-left flex flex-col  m-5 md:p-6 md:w-[470px] lg:w-[500px]">
-              <span className="text-2xl md:text-3xl text-gray-400">COMMANDER</span>
-              <h1 className="text-4xl md:text-5lg lg:text-6xl">DOUGLAS HURELY </h1>
+              <span className="text-2xl md:text-3xl text-gray-400 ">{state.subtitle}</span>
+            <h1 className="text-4xl md:text-5lg lg:text-6xl">{ state.title}</h1>
 
-              <p className="text-xl font-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-                mollitia impedit obcaecati ipsam cum quis, dignissimos hic
-                deserunt explicabo quae exercitationem perspiciatis suscipit
-                nostrum molestias.
+              <p className="text-xl font-light ">
+                {state.description}
             </p>
-            <ul>
-              <li className="p-2 m-2 bg-gray-500  inline-block rounded-full"></li>
-              <li className="p-2 m-2 bg-gray-500  inline-block rounded-full"></li>
-              <li className="p-2 m-2 bg-gray-500  inline-block rounded-full"></li>
-              <li className="p-2 m-2 bg-gray-500  inline-block rounded-full"></li>
-              <li className="p-2 m-2 bg-gray-500  inline-block rounded-full"></li>
+            <ul className='mt-auto  '>
+              {
+                datas.map((a,idx) => {
+                  return (
+                    <div key={idx} className="p-1 m-2 bg-gray-500  inline-block rounded-full cursor-pointer hover:bg-white active:bg-blue-400">
+                      <li 
+                    onClick={()=>updateState(idx)}></li>
+                    </div>
+                    
+                  )
+                })
+              }
+              
+              
             </ul>
         </div>
 
-          
-        
-          
-
         </div>
 
 
-        <div className=" p-9 ">
-          <img src={Avatar} alt=""  className=""/>
+        <div className=" p-9 w-[570px] h-[712px]">
+          <img src={state.url} alt=""  className=""/>
         </div>
-        
-
-
-       
+  
     </div>
     </div>
   );
