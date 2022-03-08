@@ -11,7 +11,8 @@ const PlantData = [
         desctiption: "See our planet as you have never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you are there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
         distance: '384,400 km',
         time: '3 days',
-        url:images.Moon
+        url: images.Moon,
+        bg:images.destinationbg
        
     },
 

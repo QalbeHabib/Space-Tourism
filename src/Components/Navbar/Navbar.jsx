@@ -11,16 +11,16 @@ const Navbar = () => {
 
     return (
         <div className='   h-24 flex justify-between px-8 md:px-0 items-center text-white lg:my-8 md:m-0'>
-            <img src={ logo } alt="LOGO is here" className='md:pl-5 cursor-pointer' />
+          <Link to="/" className='md:pl-5 cursor-pointer'>  <img src={ logo } alt="LOGO is here"  /></Link>
            
           
 
             <div>
                 <ul className=' justify-around  blue-glassmorphism bg-blur-sm items-center hidden md:flex  md:text-md md:p-5  md:w-[450px] lg:w-[830px] lg:space-x-9 lg:text-xl lg:justify-self-end'>
-                    <li><Link to="/"><span className='font-bold px-1 md:hidden lg:inline-block'>00</span>  HOME</Link></li>
-                    <li><Link to="/destination"><span className='font-bold px-1 md:hidden lg:inline-block'>01</span>  DESTINATION</Link></li>
-                    <li><Link to="/crew"><span className='font-bold px-1 md:hidden lg:inline-block'>02</span>  CREW</Link></li>
-                    <li className='md:flex-grow'><Link to="/spacelaunch"><span className='font-bold px-1 md:hidden lg:inline-block'>03</span>  TECHNLOGY</Link></li>
+                    <li className='cursor-pointer hover:border-b-4 border-white'><Link to="/"><span className='font-bold px-1 md:hidden lg:inline-block'>00</span>  HOME</Link></li>
+                    <li className='cursor-pointer hover:border-b-4 border-white'><Link to="/destination"><span className='font-bold px-1 md:hidden lg:inline-block'>01</span>  DESTINATION</Link></li>
+                    <li className='cursor-pointer hover:border-b-4 border-white'><Link to="/crew"><span className='font-bold px-1 md:hidden lg:inline-block'>02</span>  CREW</Link></li>
+                    <li className='cursor-pointer hover:border-b-4 border-white md:flex-grow' ><Link to="/spacelaunch"><span className='font-bold px-1 md:hidden lg:inline-block'>03</span>  TECHNLOGY</Link></li>
                 </ul>
             </div>
             
