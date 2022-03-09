@@ -13,7 +13,7 @@ function Home() {
             SO, YOU WANT TOT TRAVEL TO
           </h2>
           <h1 className=" text-8xl md:text-9xl my-9 text-center ">SPACE</h1>
-          <p className="text-md md:text-lg text-center lg:text-left">
+          <p className="text-md md:text-lg lg:text-xl text-center lg:text-left">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Voluptatibus velit deserunt necessitatibus voluptas earum voluptate
             vitae. Eos sed reiciendis culpa facilis cumque omnis vitae odit, ut

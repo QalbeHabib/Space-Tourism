@@ -61,30 +61,31 @@ export const crewData = [
     },
     {
         id:1,
-        title: 'MARK SHUTTLEWORTH',
+        title: 'SHUTTLEWORTH',
         subtitle: 'Mission Specialist ',
         description: 'Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.',
         url:images.Mark
     },
     {
         id:2,
-        title: 'Victor Glover',
-        subtitle: 'PILOT',
-        description: 'Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer. ',
-        url:images.Victor
-    },
-    {
-        id:3,
         title: 'Anousheh Ansari',
         subtitle: 'Flight Engineer',
         description: 'Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space. ',
         url:images.Anousheh
     },
+    {
+        id:3,
+        title: 'Victor Glover',
+        subtitle: 'PILOT',
+        description: 'Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer. ',
+        url:images.Victor
+    },
+  
 ]
 
 export const LaunchData = [
     {   id:0,
-        title: 'LAUNCH VEHICLE',
+        title: 'LAUNCH',
         description: 'A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, its quite an awe-inspiring sight on the launch pad!',
         url:images.LaunchVehicle
     },

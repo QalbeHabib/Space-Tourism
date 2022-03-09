@@ -7,7 +7,7 @@ import { images } from "./Assets/Images/index";
 
 function App() {
   return (
-    <div className=" max-w-[1440px] mx-auto scroll-smooth  overflow-hidden">
+    <div className="  max-w-[1440px] mx-auto scroll-smooth  ">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route

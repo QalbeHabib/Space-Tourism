@@ -7,20 +7,22 @@ import {  Link } from "react-router-dom";
 const Navbar = () => {
 
     const [menu, setMenu] = useState(false)
+    const liBorder = [ 'font-bold', 'px-1' ,'md:text-lg', 'cursor-pointer', 'hover:border-b-4', 'border-white'  ]
     
 
     return (
         <div className='   h-24 flex justify-between px-8 md:px-0 items-center text-white lg:my-8 md:m-0'>
           <Link to="/" className='md:pl-5 cursor-pointer'>  <img src={ logo } alt="LOGO is here"  /></Link>
-           
+        
+            <div className=' relative lg:w-[32%] lg:h-[1px] bg-gray-500  left-[5%] z-10'></div>
           
 
             <div>
-                <ul className=' justify-around  blue-glassmorphism bg-blur-sm items-center hidden md:flex  md:text-md md:p-5  md:w-[450px] lg:w-[830px] lg:space-x-9 lg:text-xl lg:justify-self-end'>
-                    <li className='cursor-pointer hover:border-b-4 border-white'><Link to="/"><span className='font-bold px-1 md:hidden lg:inline-block'>00</span>  HOME</Link></li>
-                    <li className='cursor-pointer hover:border-b-4 border-white'><Link to="/destination"><span className='font-bold px-1 md:hidden lg:inline-block'>01</span>  DESTINATION</Link></li>
-                    <li className='cursor-pointer hover:border-b-4 border-white'><Link to="/crew"><span className='font-bold px-1 md:hidden lg:inline-block'>02</span>  CREW</Link></li>
-                    <li className='cursor-pointer hover:border-b-4 border-white md:flex-grow' ><Link to="/spacelaunch"><span className='font-bold px-1 md:hidden lg:inline-block'>03</span>  TECHNLOGY</Link></li>
+                <ul className=' justify-between px-8 white-glassmorphism border-none outline-none bg-blur-sm items-center hidden md:flex  md:text-sm md:p-5   md:w-[550px] lg:w-[830px] lg:space-x-9 lg:text-xl '>
+                    <li><Link to="/"  className='font-bold px-1 cursor-pointer hover:border-b-2 border-white pb-8'>00 HOME</Link></li>
+                    <li><Link to="/destination" className='font-bold px-1  cursor-pointer hover:border-b-2 border-white pb-8'>01  DESTINATION</Link></li>
+                    <li><Link to="/crew"  className='font-bold px-1  cursor-pointer hover:border-b-2 border-white pb-8'>02  CREW</Link></li>
+                    <li><Link to="/spacelaunch" className='font-bold px-1  cursor-pointer hover:border-b-2 border-white pb-8'>03  TECHNLOGY</Link></li>
                 </ul>
             </div>
             

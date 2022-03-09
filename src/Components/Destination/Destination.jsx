@@ -11,8 +11,6 @@ const Destination = ({ datas }) => {
 
   const [state, setState] = useState(datas[0]);
 
-  console.log(state);
-
   const updateState = (id) => {
     setState(datas[id]);
   };
@@ -38,11 +36,8 @@ const Destination = ({ datas }) => {
               <ul className="flex justify-center mt-10 text-xl md:2xl  ">
                 {Navlist.map((list, idx) => (
                   <div key={idx}>
-                    <li
-                      onClick={() => updateState(idx)}
-                      className="cursor-pointer hover:border-b-4 border-white"
-                    >
-                      <a> {list}</a>
+                    <li  onClick={() => updateState(idx)} >
+                      <a className="cursor-pointer hover:border-b-2 border-white pb-4"> {list}</a>
                     </li>
                   </div>
                 ))}
@@ -55,7 +50,7 @@ const Destination = ({ datas }) => {
                 </p>
                 <hr />
 
-                <div className="flex flex-col space-y-8 md:space-y-10 lg:flex-row lg:justify-around lg:space-y-0   w-full">
+                <div className="flex flex-col space-y-8 md:space-y-10 lg:flex-row lg:justify-around lg:space-y-0  mb-9 w-full">
                   <div>
                     <span className="md:text-xl lg:text-lg">AVG. DISTANCE</span>
                     <h3 className="text-3xl md:text-4xl lg:text-2xl font-bold m-2">
