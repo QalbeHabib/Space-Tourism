@@ -8,7 +8,8 @@ const SpaceLaunch = ({ datas }) => {
   setState(datas[id])
 }
   return (
-    <div className="text-white h-screen">
+    <div className="text-white  max-w-[1440px] lg:h-[900px] mx-auto scroll-smooth ">
+     
     <Navbar />
 
     <div className="flex justify-center my-6 items-center text-2xl md:justify-start  p-4">
@@ -63,7 +64,8 @@ const SpaceLaunch = ({ datas }) => {
 
      
   </div>
-  </div>
+      </div>
+  
   )
 }
 

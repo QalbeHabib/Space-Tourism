@@ -13,3 +13,17 @@
       transform: rotate(360deg);
     }
   }
+
+  li .current{
+    border-bottom: 2px solid #FFF;
+    
+  }
+
+  .active{
+
+    
+      padding-bottom: 2rem;
+      border-bottom: 5px solid white;
+     
+  
+  }

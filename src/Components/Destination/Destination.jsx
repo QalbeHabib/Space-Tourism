@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
-import Moon from "../../Assets/Images/Moon.png";
-import { images } from "../../Assets/Images/index";
-// import { GlobalContext } from "../../Context/GlobalContext";
 import "./destination.css";
 
-const Destination = ({ datas }) => {
+const Destination = ({ datas , habib }) => {
   // datas.map(data => console.log(data.desctiption))
-  const Navlist = ["MOON", "MARS", "EUTOPA", "TITAN"];
+
+  
+  const Navlist = ["MOON", "MARS", "EUTOPA", "TITAN" ];
 
   const [state, setState] = useState(datas[0]);
 
   const updateState = (id) => {
     setState(datas[id]);
+
   };
 
+ 
+
   return (
-    <div>
+    <div className=" max-w-[1440px] lg:h-[900px] mx-auto scroll-smooth ">
       <Navbar />
       <div className="text-2xl md:text-3xl lg:text-4xl text-white flex justify-center lg:justify-start p-11 lg:p-7 ">
         <div className="mr-6 lg:ml-8">01</div>
@@ -35,9 +37,12 @@ const Destination = ({ datas }) => {
             <div className="text-white text-center lg:text-left space-y-10 flex flex-col justify-center items-center lg:space-y-2 lg:p-4">
               <ul className="flex justify-center mt-10 text-xl md:2xl  ">
                 {Navlist.map((list, idx) => (
+                  
                   <div key={idx}>
-                    <li  onClick={() => updateState(idx)} >
-                      <a className="cursor-pointer hover:border-b-2 border-white pb-4"> {list}</a>
+                    <li onClick={() => updateState(idx)}>
+
+                      <a className=' hover:border-b-8 pb-4 border-white cursor-pointer current' > {list} </a>
+
                     </li>
                   </div>
                 ))}
